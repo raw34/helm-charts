@@ -101,5 +101,5 @@ persistence:
   size: 10Gi
   annotations: {}
 
-  wwwEtcPath: /mnt/wwwetc
-  wwwRootPath: /mnt/wwwroot
+  wwwEtcPath: /data/wwwetc
+  wwwRootPath: /data/wwwroot

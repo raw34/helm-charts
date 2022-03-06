@@ -45,7 +45,7 @@ spec:
               subPath: nginx/nginx.conf
             - name: etc-volume
               mountPath: /etc/nginx/sites-available
-              subPath: nginx/sites-available
+              subPath: nginx/sites-available-k8s
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
