@@ -27,19 +27,6 @@ spec:
       serviceAccountName: {{ include "php7.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
-      volumes:
-        - name: nginx-conf
-          hostPath:
-            path: /Users/randy/wwwetc/nginx/nginx.conf
-            type: File
-        - name: sites-available
-          hostPath:
-            path: /Users/randy/wwwetc/nginx/sites-available
-            type: Directory
-        - name: www
-          hostPath:
-            path: /Users/randy/wwwroot/repo
-            type: Directory
       containers:
         - name: {{ .Values.nginxImage.repository}}
           securityContext:
@@ -71,6 +58,19 @@ spec:
           volumeMounts:
             - name: www
               mountPath: /www
+      volumes:
+        - name: nginx-conf
+          hostPath:
+            path: /Users/randy/wwwetc/nginx/nginx.conf
+            type: File
+        - name: sites-available
+          hostPath:
+            path: /Users/randy/wwwetc/nginx/sites-available
+            type: Directory
+        - name: www
+          hostPath:
+            path: /Users/randy/wwwroot/repo
+            type: Directory
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
