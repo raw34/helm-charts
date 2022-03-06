@@ -40,10 +40,10 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            - name: config-volume
+            - name: nginx-volume
               mountPath: /etc/nginx/nginx.conf
               subPath: nginx.conf
-            - name: config-volume
+            - name: nginx-volume
               mountPath: /etc/nginx/sites-available
               subPath: sites-available
         - name: {{ .Chart.Name }}
@@ -61,7 +61,7 @@ spec:
             - name: www-volume
               mountPath: /www
       volumes:
-        - name: config-volume
+        - name: nginx-volume
           hostPath:
             path: {{ .Values.persistence.nginxPath }}
             type: Directory
