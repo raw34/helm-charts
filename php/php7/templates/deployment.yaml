@@ -40,10 +40,12 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            - name: nginx-conf
+            - name: config-volume
               mountPath: /etc/nginx/nginx.conf
-            - name: sites-available
+              subPath: nginx.conf
+            - name: config-volume
               mountPath: /etc/nginx/sites-available
+              subPath: sites-available
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
@@ -56,20 +58,16 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            - name: www
+            - name: www-volume
               mountPath: /www
       volumes:
-        - name: nginx-conf
+        - name: config-volume
           hostPath:
-            path: /Users/randy/wwwetc/nginx/nginx.conf
-            type: File
-        - name: sites-available
-          hostPath:
-            path: /Users/randy/wwwetc/nginx/sites-available
+            path: {{ .Values.persistence.nginxPath }}
             type: Directory
-        - name: www
+        - name: www-volume
           hostPath:
-            path: /Users/randy/wwwroot/repo
+            path: {{ .Values.persistence.wwwPath }}
             type: Directory
       {{- with .Values.nodeSelector }}
       nodeSelector:
