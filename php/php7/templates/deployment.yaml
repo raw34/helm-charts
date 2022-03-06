@@ -30,15 +30,15 @@ spec:
       volumes:
         - name: nginx-conf
           hostPath:
-            path: $PATH_WWW_ETC/nginx/nginx.conf
+            path: /Users/randy/wwwetc/nginx/nginx.conf
             type: File
         - name: sites-available
           hostPath:
-            path: $PATH_WWW_ETC/nginx/sites-available
+            path: /Users/randy/wwwetc/nginx/sites-available
             type: Directory
         - name: www
           hostPath:
-            path: $PATH_WWW_ROOT
+            path: /Users/randy/wwwroot/repo
             type: Directory
       containers:
         - name: {{ .Values.nginxImage.repository}}
@@ -50,14 +50,6 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
@@ -74,14 +66,6 @@ spec:
             - name: php-fpm
               containerPort: 9000
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
