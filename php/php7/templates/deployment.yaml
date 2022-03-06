@@ -28,6 +28,26 @@ spec:
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: php-fpm
+              containerPort: 9000
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: etc-volume
+              mountPath: /usr/local/etc/php/php.ini
+              subPath: php/php7.ini
+            - name: etc-volume
+              mountPath: /usr/local/etc/php-fpm.d/www.conf
+              subPath: php/php7-fpm.conf
+            - name: www-volume
+              mountPath: /www
         - name: {{ .Values.nginxImage.repository}}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
@@ -46,20 +66,6 @@ spec:
             - name: etc-volume
               mountPath: /etc/nginx/sites-available
               subPath: nginx/sites-available-k8s
-        - name: {{ .Chart.Name }}
-          securityContext:
-            {{- toYaml .Values.securityContext | nindent 12 }}
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          ports:
-            - name: php-fpm
-              containerPort: 9000
-              protocol: TCP
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }}
-          volumeMounts:
-            - name: www-volume
-              mountPath: /www
       volumes:
         - name: etc-volume
           hostPath:
