@@ -40,12 +40,12 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            - name: nginx-volume
+            - name: etc-volume
               mountPath: /etc/nginx/nginx.conf
-              subPath: nginx.conf
-            - name: nginx-volume
+              subPath: nginx/nginx.conf
+            - name: etc-volume
               mountPath: /etc/nginx/sites-available
-              subPath: sites-available
+              subPath: nginx/sites-available
         - name: {{ .Chart.Name }}
           securityContext:
             {{- toYaml .Values.securityContext | nindent 12 }}
@@ -61,13 +61,13 @@ spec:
             - name: www-volume
               mountPath: /www
       volumes:
-        - name: nginx-volume
+        - name: etc-volume
           hostPath:
-            path: {{ .Values.persistence.nginxPath }}
+            path: {{ .Values.persistence.wwwEtcPath }}
             type: Directory
         - name: www-volume
           hostPath:
-            path: {{ .Values.persistence.wwwPath }}
+            path: {{ .Values.persistence.wwwRootPath }}
             type: Directory
       {{- with .Values.nodeSelector }}
       nodeSelector:

@@ -101,5 +101,5 @@ persistence:
   size: 10Gi
   annotations: {}
 
-  nginxPath: /Users/randy/wwwetc/nginx
-  wwwPath: /Users/randy/wwwroot/repo
+  wwwEtcPath: /mnt/wwwetc
+  wwwRootPath: /mnt/wwwroot
