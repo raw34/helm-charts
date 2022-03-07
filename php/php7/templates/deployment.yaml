@@ -40,12 +40,12 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            - name: etc-volume
+            - name: www-volume
               mountPath: /usr/local/etc/php/php.ini
-              subPath: php/php7.ini
-            - name: etc-volume
+              subPath: helm-charts/php/php7.ini
+            - name: www-volume
               mountPath: /usr/local/etc/php-fpm.d/www.conf
-              subPath: php/php7-fpm.conf
+              subPath: helm-charts/php/php7-fpm.conf
             - name: www-volume
               mountPath: /www
         - name: {{ .Values.nginxImage.repository}}
@@ -60,17 +60,15 @@ spec:
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
-            - name: etc-volume
+            - name: www-volume
               mountPath: /etc/nginx/nginx.conf
-              subPath: nginx/nginx.conf
-            - name: etc-volume
-              mountPath: /etc/nginx/sites-available
-              subPath: nginx/sites-available-k8s
+              subPath: helm-charts/nginx/nginx.conf
+            - name: www-volume
+              mountPath: /etc/nginx/sites-available/php7-localhost.conf
+              subPath: helm-charts/nginx/php7-localhost.conf
+            - name: www-volume
+              mountPath: /www
       volumes:
-        - name: etc-volume
-          hostPath:
-            path: {{ .Values.persistence.wwwEtcPath }}
-            type: Directory
         - name: www-volume
           hostPath:
             path: {{ .Values.persistence.wwwRootPath }}

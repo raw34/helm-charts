@@ -4,17 +4,17 @@
 
 replicaCount: 1
 
-nginxImage:
-  repository: nginx
-  pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: "latest"
-
 image:
   repository: php
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: "7.4-fpm"
+  tag: "7-fpm-alpine"
+
+nginxImage:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "alpine"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -101,5 +101,4 @@ persistence:
   size: 10Gi
   annotations: {}
 
-  wwwEtcPath: /host/wwwetc
-  wwwRootPath: /host/wwwroot
+  wwwRootPath: /host/wwwroot/repo
