@@ -71,7 +71,7 @@ spec:
       volumes:
         - name: www-volume
           hostPath:
-            path: {{ .Values.persistence.wwwRootPath }}
+            path: {{ .Values.persistence.wwwPath }}
             type: Directory
       {{- with .Values.nodeSelector }}
       nodeSelector:

@@ -101,4 +101,4 @@ persistence:
   size: 10Gi
   annotations: {}
 
-  wwwRootPath: /host/wwwroot/repo
+  wwwPath: /host/wwwroot/repo
