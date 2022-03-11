@@ -341,21 +341,21 @@ ports:
     # The port protocol (TCP/UDP)
     protocol: TCP
 
-#  mongodb:
-#    port: 27017
-#    # hostPort: 27017
-#    expose: true
-#    exposedPort: 27017
-#    # The port protocol (TCP/UDP)
-#    protocol: TCP
-#
-#  cassandra:
-#    port: 9042
-#    # hostPort: 9042
-#    expose: true
-#    exposedPort: 9042
-#    # The port protocol (TCP/UDP)
-#    protocol: TCP
+  mongodb:
+    port: 27017
+    # hostPort: 27017
+    expose: true
+    exposedPort: 27017
+    # The port protocol (TCP/UDP)
+    protocol: TCP
+
+  cassandra:
+    port: 9042
+    # hostPort: 9042
+    expose: true
+    exposedPort: 9042
+    # The port protocol (TCP/UDP)
+    protocol: TCP
 
 #  redis:
 #    port: 6379
