@@ -21,7 +21,7 @@ testFramework:
 ## Specify password for root user
 ##
 ## Default: random 10 character string
-# mysqlRootPassword: testing
+mysqlRootPassword: "123456"
 
 ## Create a database user
 ##
