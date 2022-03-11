@@ -8,5 +8,5 @@ spec:
   routes:
     - match: HostSNI(`*`)
       services:
-        - name: kafka-client
+        - name: kafka
           port: 9092

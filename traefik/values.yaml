@@ -341,45 +341,45 @@ ports:
     # The port protocol (TCP/UDP)
     protocol: TCP
 
-  redis:
-    port: 6379
-    # hostPort: 6379
-    expose: true
-    exposedPort: 6379
-    # The port protocol (TCP/UDP)
-    protocol: TCP
+#  mongodb:
+#    port: 27017
+#    # hostPort: 27017
+#    expose: true
+#    exposedPort: 27017
+#    # The port protocol (TCP/UDP)
+#    protocol: TCP
+#
+#  cassandra:
+#    port: 9042
+#    # hostPort: 9042
+#    expose: true
+#    exposedPort: 9042
+#    # The port protocol (TCP/UDP)
+#    protocol: TCP
 
-  mongodb:
-    port: 27017
-    # hostPort: 27017
-    expose: true
-    exposedPort: 27017
-    # The port protocol (TCP/UDP)
-    protocol: TCP
+#  redis:
+#    port: 6379
+#    # hostPort: 6379
+#    expose: true
+#    exposedPort: 6379
+#    # The port protocol (TCP/UDP)
+#    protocol: TCP
 
-  cassandra:
-    port: 9042
-    # hostPort: 9042
-    expose: true
-    exposedPort: 9042
-    # The port protocol (TCP/UDP)
-    protocol: TCP
+#  elasticsearch:
+#    port: 9200
+#    # hostPort: 9200
+#    expose: true
+#    exposedPort: 9200
+#    # The port protocol (TCP/UDP)
+#    protocol: TCP
 
-  elasticsearch:
-    port: 9200
-    # hostPort: 9200
-    expose: true
-    exposedPort: 9200
-    # The port protocol (TCP/UDP)
-    protocol: TCP
-
-  kafka:
-    port: 9092
-    # hostPort: 9092
-    expose: true
-    exposedPort: 9092
-    # The port protocol (TCP/UDP)
-    protocol: TCP
+#  kafka:
+#    port: 9092
+#    # hostPort: 9092
+#    expose: true
+#    exposedPort: 9092
+#    # The port protocol (TCP/UDP)
+#    protocol: TCP
 
 # TLS Options are created as TLSOption CRDs
 # https://doc.traefik.io/traefik/https/tls/#tls-options
