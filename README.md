@@ -21,6 +21,7 @@ helm repo add elastic https://helm.elastic.co
 ```
 helm install traefik traefik/traefik -f traefik/values.yaml
 kubectl apply -f traefik/dashboard.yaml
+minikube tunnel
 ```
 
 ## Install MySQL
