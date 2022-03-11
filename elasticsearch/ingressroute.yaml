@@ -8,5 +8,5 @@ spec:
   routes:
     - match: HostSNI(`*`)
       services:
-        - name: elasticsearch-client
+        - name: elasticsearch-master
           port: 9200

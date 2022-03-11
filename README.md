@@ -11,6 +11,7 @@ brew install helm
 helm repo add stable  https://kubernetes-charts.storage.googleapis.com/
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add traefik https://helm.traefik.io/traefik
+helm repo add elastic https://helm.elastic.co
 ```
 
 ## Install Traefik
@@ -45,7 +46,7 @@ kubectl apply -f cassandra/ingressroute.yaml
 
 ## Install Elasticsearch
 ```
-helm install elasticsearch stable/elasticsearch -f elasticsearch/values.yaml
+helm install elasticsearch elastic/elasticsearch -f elasticsearch/values.yaml
 kubectl apply -f elasticsearch/ingressroute.yaml
 ```
 
