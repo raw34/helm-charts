@@ -1,0 +1,12 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRouteTCP
+metadata:
+  name: elasticsearch
+spec:
+  entryPoints:
+    - elasticsearch
+  routes:
+    - match: HostSNI(`*`)
+      services:
+        - name: elasticsearch
+          port: 9200

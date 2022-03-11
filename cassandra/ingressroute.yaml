@@ -1,0 +1,12 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRouteTCP
+metadata:
+  name: cassandra
+spec:
+  entryPoints:
+    - cassandra
+  routes:
+    - match: HostSNI(`*`)
+      services:
+        - name: cassandra
+          port: 9042
