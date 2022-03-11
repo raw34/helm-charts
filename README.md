@@ -34,7 +34,7 @@ kubectl apply -f redis/ingressroute.yaml
 
 ## Install MongoDB
 ```
-helm install mongodb  stable/mongodb -f mongodb/values.yaml
+helm install mongodb bitnami/mongodb -f mongodb/values.yaml
 kubectl apply -f mongodb/ingressroute.yaml
 ```
 
