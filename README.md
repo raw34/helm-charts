@@ -50,6 +50,12 @@ helm install elasticsearch elastic/elasticsearch -f elasticsearch/values.yaml
 kubectl apply -f elasticsearch/ingressroute.yaml
 ```
 
+## Install Kafka
+```
+helm install kafka bitnami/kafka -f kafka/values.yaml
+kubectl apply -f kafka/ingressroute.yaml
+```
+
 ## Install PHP
 ```
 helm install php7 php/php7
