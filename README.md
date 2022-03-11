@@ -10,11 +10,12 @@ minikube start --mount=true --mount-string="$HOME:/host"
 brew install helm
 helm repo add stable  https://kubernetes-charts.storage.googleapis.com/
 helm repo add bitnami https://charts.bitnami.com/bitnami
+helm repo add traefik https://helm.traefik.io/traefik
 ```
 
 ## Install Traefik
 ```
-helm install traefik/traefik -f traefik/values.yaml
+helm install traefik traefik/traefik -f traefik/values.yaml
 kubectl apply -f traefik/dashboard.yaml
 ```
 
