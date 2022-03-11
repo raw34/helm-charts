@@ -1,13 +1,16 @@
 # helm-charts
+## Install Helm
+```
+brew install helm
+```
 
 ## Start Kubernetes Cluster
 ```
 minikube start --mount=true --mount-string="$HOME:/host"
 ```
 
-## Install Helm
+## Add Helm Repository
 ```
-brew install helm
 helm repo add stable  https://kubernetes-charts.storage.googleapis.com/
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add traefik https://helm.traefik.io/traefik
