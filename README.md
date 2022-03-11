@@ -30,12 +30,6 @@ helm install mysql stable/mysql -f mysql/values.yaml
 kubectl apply -f mysql/ingressroute.yaml
 ```
 
-## Install Redis
-```
-helm install redis stable/redis -f redis/values.yaml
-kubectl apply -f redis/ingressroute.yaml
-```
-
 ## Install MongoDB
 ```
 helm install mongodb bitnami/mongodb -f mongodb/values.yaml
@@ -46,6 +40,12 @@ kubectl apply -f mongodb/ingressroute.yaml
 ```
 helm install cassandra bitnami/cassandra -f cassandra/values.yaml
 kubectl apply -f cassandra/ingressroute.yaml
+```
+
+## Install Redis
+```
+helm install redis stable/redis -f redis/values.yaml
+kubectl apply -f redis/ingressroute.yaml
 ```
 
 ## Install Elasticsearch
