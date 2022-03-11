@@ -101,8 +101,8 @@ image:
 ## @param dbUser.existingSecret Use an existing secret object for `dbUser.user` password (will ignore `dbUser.password`)
 ##
 dbUser:
-  user: cassandra
-  forcePassword: false
+  user: root
+  forcePassword: true
   password: testing
   ## Use an existing secrets which already stores your password data.
   ## for backwards compatibility, existingSecret can be a simple string,
