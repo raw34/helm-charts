@@ -7,13 +7,13 @@ appVersion: "6.8.6"
 ##
 serviceAccounts:
   client:
-    create: true
+    create: false
     name:
   master:
     create: true
     name:
   data:
-    create: true
+    create: false
     name:
 
 ## Specify if a Pod Security Policy for node-exporter must be created
