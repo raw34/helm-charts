@@ -11,4 +11,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /host/wwwdata/mysql
+    path: /host/wwwdata/mysql-k8s
