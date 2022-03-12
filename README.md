@@ -70,7 +70,7 @@ kubectl apply -f kafka/ingressroute.yaml
 helm install php7 php/php7
 ```
 
-## Access the Dashboard
+## Access Kubernetes Dashboard
 ```
 minikube dashboard
 ```
