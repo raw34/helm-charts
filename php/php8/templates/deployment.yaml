@@ -34,19 +34,45 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
+            - name: php-fpm
+              containerPort: 9000
+              protocol: TCP
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: www-volume
+              mountPath: /usr/local/etc/php/php.ini
+              subPath: helm-charts/php/php8.ini
+            - name: www-volume
+              mountPath: /usr/local/etc/php-fpm.d/www.conf
+              subPath: helm-charts/php/php8-fpm.conf
+            - name: www-volume
+              mountPath: /www
+        - name: {{ .Values.nginxImage.repository}}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.nginxImage.repository }}:{{ .Values.nginxImage.tag }}"
+          imagePullPolicy: {{ .Values.nginxImage.pullPolicy }}
+          ports:
             - name: http
               containerPort: 80
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+            - name: www-volume
+              mountPath: /etc/nginx/nginx.conf
+              subPath: helm-charts/nginx/nginx.conf
+            - name: www-volume
+              mountPath: /etc/nginx/sites-available/php8-localhost.conf
+              subPath: helm-charts/nginx/php8-localhost.conf
+            - name: www-volume
+              mountPath: /www
+      volumes:
+        - name: www-volume
+          hostPath:
+            path: {{ .Values.persistence.wwwPath }}
+            type: Directory
       {{- with .Values.nodeSelector }}
       nodeSelector:
         {{- toYaml . | nindent 8 }}
