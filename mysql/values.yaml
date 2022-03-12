@@ -121,7 +121,7 @@ auth:
   existingSecret: ""
   ## @param auth.forcePassword Force users to specify required passwords
   ##
-  forcePassword: true
+  forcePassword: false
   ## @param auth.usePasswordFiles Mount credentials as files instead of using an environment variable
   ##
   usePasswordFiles: false
