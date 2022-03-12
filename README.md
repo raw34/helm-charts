@@ -26,6 +26,8 @@ minikube tunnel
 
 ## Install MySQL
 ```
+kubectl apply -f mysql/pv-volume.yaml
+kubectl apply -f mysql/pv-claim.yaml
 helm install mysql bitnami/mysql -f mysql/values.yaml
 kubectl apply -f mysql/ingressroute.yaml
 ```
