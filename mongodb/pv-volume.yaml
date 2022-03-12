@@ -5,7 +5,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: mongodb-pv-storage
+  storageClassName: standard
   capacity:
     storage: 8Gi
   accessModes:

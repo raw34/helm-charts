@@ -5,7 +5,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: mysql-pv-storage
+  storageClassName: standard
   capacity:
     storage: 8Gi
   accessModes:
