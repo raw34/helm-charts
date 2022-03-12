@@ -42,6 +42,7 @@ kubectl apply -f mongodb/ingressroute.yaml
 
 ## Install Cassandra
 ```
+kubectl apply -f cassandra/pv-storage.yaml
 kubectl apply -f cassandra/pv-volume.yaml
 kubectl apply -f cassandra/pv-claim.yaml
 helm install cassandra bitnami/cassandra -f cassandra/values.yaml
