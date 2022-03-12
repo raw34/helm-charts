@@ -11,4 +11,4 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /host/wwwdata/msyql
+    path: /host/wwwdata/mysql
