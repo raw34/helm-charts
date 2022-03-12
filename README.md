@@ -34,6 +34,8 @@ kubectl apply -f mysql/ingressroute.yaml
 
 ## Install MongoDB
 ```
+kubectl apply -f mongodb/pv-volume.yaml
+kubectl apply -f mongodb/pv-claim.yaml
 helm install mongodb bitnami/mongodb -f mongodb/values.yaml
 kubectl apply -f mongodb/ingressroute.yaml
 ```

@@ -799,7 +799,7 @@ persistence:
   ## If defined, PVC must be created manually before volume will be bound
   ## Ignored when mongodb.architecture=replicaset
   ##
-  existingClaim: ""
+  existingClaim: "mongodb-pv-claim"
   ## @param persistence.storageClass PVC Storage Class for MongoDB(&reg;) data volume
   ## If defined, storageClassName: <storageClass>
   ## If set to "-", storageClassName: "", which disables dynamic provisioning
