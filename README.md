@@ -26,7 +26,7 @@ minikube tunnel
 
 ## Install MySQL
 ```
-helm install mysql stable/mysql -f mysql/values.yaml
+helm install mysql bitnami/mysql -f mysql/values.yaml
 kubectl apply -f mysql/ingressroute.yaml
 ```
 
@@ -44,7 +44,7 @@ kubectl apply -f cassandra/ingressroute.yaml
 
 ## Install Redis
 ```
-helm install redis stable/redis -f redis/values.yaml
+helm install redis bitnami/redis -f redis/values.yaml
 kubectl apply -f redis/ingressroute.yaml
 ```
 

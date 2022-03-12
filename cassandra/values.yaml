@@ -103,7 +103,7 @@ image:
 dbUser:
   user: root
   forcePassword: true
-  password: testing
+  password: "123456"
   ## Use an existing secrets which already stores your password data.
   ## for backwards compatibility, existingSecret can be a simple string,
   ## referencing the secret by name.
