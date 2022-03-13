@@ -68,14 +68,20 @@ kubectl apply -f kafka/ingressroute.yaml
 ## Install PHP
 ```
 helm install php7 php/php7
-```
-
-## Access Kubernetes Dashboard
-```
-minikube dashboard
+helm install php8 php/php8
 ```
 
 ## Host Config
 ```
 sudo -- sh -c -e  "echo 127.0.0.1 'traefik.localhost php7-localhost.k8s php8-localhost.k8s' >> /etc/hosts"
+```
+
+## Validate Installation
+Visit: [http://php7-localhost.k8s](http://php7-localhost.k8s)
+
+Visit: [http://php8-localhost.k8s](http://php8-localhost.k8s)
+
+## Access Kubernetes Dashboard
+```
+minikube dashboard
 ```
