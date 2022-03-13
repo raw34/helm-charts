@@ -28,7 +28,7 @@ kubectl apply -f traefik/dashboard.yaml
 kubectl apply -f mysql/pv-volume.yaml
 kubectl apply -f mysql/pv-claim.yaml
 helm install mysql bitnami/mysql -f mysql/values.yaml
-kubectl apply -f mysql/ingressroute.yaml
+kubectl apply -f mysql/ingress-tcp.yaml
 ```
 
 ## Install MongoDB
@@ -36,32 +36,32 @@ kubectl apply -f mysql/ingressroute.yaml
 kubectl apply -f mongodb/pv-volume.yaml
 kubectl apply -f mongodb/pv-claim.yaml
 helm install mongodb bitnami/mongodb -f mongodb/values.yaml
-kubectl apply -f mongodb/ingressroute.yaml
+kubectl apply -f mongodb/ingress-tcp.yaml
 ```
 
 ## Install Cassandra
 ```
 kubectl apply -f cassandra/pv-volume.yaml
 helm install cassandra bitnami/cassandra -f cassandra/values.yaml
-kubectl apply -f cassandra/ingressroute.yaml
+kubectl apply -f cassandra/ingress-tcp.yaml
 ```
 
 ## Install Redis
 ```
 helm install redis bitnami/redis -f redis/values.yaml
-kubectl apply -f redis/ingressroute.yaml
+kubectl apply -f redis/ingress-tcp.yaml
 ```
 
 ## Install Elasticsearch
 ```
 helm install elasticsearch elastic/elasticsearch -f elasticsearch/values.yaml
-kubectl apply -f elasticsearch/ingressroute.yaml
+kubectl apply -f elasticsearch/ingress-tcp.yaml
 ```
 
 ## Install Kafka
 ```
 helm install kafka bitnami/kafka -f kafka/values.yaml
-kubectl apply -f kafka/ingressroute.yaml
+kubectl apply -f kafka/ingress-tcp.yaml
 ```
 
 ## Install PHP
