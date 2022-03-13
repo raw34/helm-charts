@@ -74,3 +74,8 @@ helm install php7 php/php7
 ```
 minikube dashboard
 ```
+
+## Host Config
+```
+sudo -- sh -c -e  "echo 127.0.0.1 'traefik.localhost php7-localhost.k8s php8-localhost.k8s' >> /etc/hosts"
+```

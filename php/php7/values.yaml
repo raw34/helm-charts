@@ -53,7 +53,7 @@ ingress:
      kubernetes.io/ingress.class: traefik
 #     kubernetes.io/tls-acme: "true"
   hosts:
-    - host: php7-localhost.local
+    - host: php7-localhost.k8s
       paths:
         - path: /
           pathType: ImplementationSpecific
