@@ -1,12 +1,18 @@
 # helm-charts
-## Install Helm
+## Install Minikube & Helm
 ```
+brew install minikube
 brew install helm
 ```
 
 ## Start Kubernetes Cluster
 ```
 minikube start --mount=true --mount-string="$HOME:/host"
+```
+
+## Access Kubernetes Dashboard
+```
+minikube dashboard
 ```
 
 ## Add Helm Repository
@@ -73,11 +79,6 @@ helm install php8 php/php8
 ## Host Config
 ```
 sudo -- sh -c -e  "echo 127.0.0.1 'traefik.localhost php7-localhost.k8s php8-localhost.k8s' >> /etc/hosts"
-```
-
-## Access Kubernetes Dashboard
-```
-minikube dashboard
 ```
 
 ## Start Minikube Tunnel
