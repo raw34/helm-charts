@@ -21,7 +21,6 @@ helm repo add elastic https://helm.elastic.co
 ```
 helm install traefik traefik/traefik -f traefik/values.yaml
 kubectl apply -f traefik/dashboard.yaml
-minikube tunnel
 ```
 
 ## Install MySQL
@@ -76,12 +75,18 @@ helm install php8 php/php8
 sudo -- sh -c -e  "echo 127.0.0.1 'traefik.localhost php7-localhost.k8s php8-localhost.k8s' >> /etc/hosts"
 ```
 
-## Validate Installation
-Visit: [http://php7-localhost.k8s](http://php7-localhost.k8s)
-
-Visit: [http://php8-localhost.k8s](http://php8-localhost.k8s)
-
 ## Access Kubernetes Dashboard
 ```
 minikube dashboard
 ```
+
+## Validate Installation
+```
+minikube tunnel
+```
+
+Visit: [http://traefik.localhost/dashboard/](http://traefik.localhost/dashboard/)
+
+Visit: [http://php7-localhost.k8s](http://php7-localhost.k8s)
+
+Visit: [http://php8-localhost.k8s](http://php8-localhost.k8s)
