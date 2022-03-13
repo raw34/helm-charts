@@ -76,7 +76,7 @@ helm install php7 php/php7
 helm install php8 php/php8
 ```
 
-## Host Config
+## Add Hosts
 ```
 sudo -- sh -c -e  "echo 127.0.0.1 'traefik.localhost php7-localhost.k8s php8-localhost.k8s' >> /etc/hosts"
 ```
