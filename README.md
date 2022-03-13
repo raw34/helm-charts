@@ -80,11 +80,12 @@ sudo -- sh -c -e  "echo 127.0.0.1 'traefik.localhost php7-localhost.k8s php8-loc
 minikube dashboard
 ```
 
-## Validate Installation
+## Start Minikube Tunnel
 ```
 minikube tunnel
 ```
 
+## Validate Installation
 Visit: [http://traefik.localhost/dashboard/](http://traefik.localhost/dashboard/)
 
 Visit: [http://php7-localhost.k8s](http://php7-localhost.k8s)
