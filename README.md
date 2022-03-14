@@ -26,7 +26,7 @@ helm repo add elastic https://helm.elastic.co
 ## Install Traefik
 ```
 helm install traefik traefik/traefik -f traefik/values.yaml
-kubectl apply -f traefik/dashboard.yaml
+kubectl apply -f traefik/ingress.yaml
 ```
 
 ## Install MySQL
