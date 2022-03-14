@@ -17,7 +17,7 @@ minikube dashboard
 
 ## Add Helm Repository
 ```
-helm repo add stable https://kubernetes-charts.storage.googleapis.com/
+helm repo add stable https://charts.helm.sh/stable
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add traefik https://helm.traefik.io/traefik
 helm repo add elastic https://helm.elastic.co
