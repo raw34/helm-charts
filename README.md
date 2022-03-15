@@ -27,7 +27,7 @@ helm repo add liwenhe https://liwenhe1993.github.io/charts/
 ## Install Traefik
 ```
 helm install traefik traefik/traefik -f traefik/values.yaml
-kubectl apply -f traefik/dashboard.yaml
+kubectl apply -f traefik/ingress.yaml
 ```
 
 ## Install MySQL
