@@ -21,6 +21,7 @@ helm repo add stable https://charts.helm.sh/stable
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add traefik https://helm.traefik.io/traefik
 helm repo add elastic https://helm.elastic.co
+helm repo add liwenhe https://liwenhe1993.github.io/charts/
 ```
 
 ## Install Traefik
@@ -50,6 +51,12 @@ kubectl apply -f mongodb/ingress-tcp.yaml
 kubectl apply -f cassandra/pv-volume.yaml
 helm install cassandra bitnami/cassandra -f cassandra/values.yaml
 kubectl apply -f cassandra/ingress-tcp.yaml
+```
+
+## Install ClickHouse
+```
+helm install clickhouse liwenhe/clickhouse -f clickhouse/values.yaml
+kubectl apply -f clickhouse/ingress-tcp.yaml
 ```
 
 ## Install Redis
