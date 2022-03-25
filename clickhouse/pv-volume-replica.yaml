@@ -5,7 +5,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: clickhouse-sc-replica
+  storageClassName: clickhouse-sc
   capacity:
     storage: 8Gi
   accessModes:

@@ -86,10 +86,10 @@ clickhouse:
     enabled: true
     ## Clickhouse data volume
     dataPersistentVolume: 
-      enabled: false
+      enabled: true
       accessModes: 
       - "ReadWriteOnce"
-      storageClassName: "-"
+      storageClassName: "clickhouse-sc"
       storage: "50Gi"
     ## Clickhouse logs volume
     logsPersistentVolume:
@@ -294,7 +294,7 @@ clickhouse:
 tabix: 
   ##
   ## Enable Tabix
-  enabled: false
+  enabled: true
   ##
   ## ## The instance number of Tabix
   replicas: "1"
