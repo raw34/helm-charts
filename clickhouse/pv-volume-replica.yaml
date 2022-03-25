@@ -3,7 +3,7 @@ kind: PersistentVolume
 metadata:
   name: clickhouse-pv-volume-replica
   labels:
-    type: local-replica
+    type: local
 spec:
   storageClassName: clickhouse-sc
   capacity:

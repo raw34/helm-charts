@@ -9,6 +9,4 @@ spec:
   resources:
     requests:
       storage: 8Gi
-  selector:
-    matchLabels:
-      pv: local-replica
+  volumeName: clickhouse-pv-volume-replica
