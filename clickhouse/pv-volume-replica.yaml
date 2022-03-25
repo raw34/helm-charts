@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: clickhouse-pv-volume-replica
+  labels:
+    type: local
+spec:
+  storageClassName: clickhouse-sc-replica
+  capacity:
+    storage: 8Gi
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /host/wwwdata/clickhouse-replica-k8s

@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: clickhouse-replica-data-clickhouse-replica-0
+spec:
+  storageClassName: clickhouse-sc-replica
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 8Gi

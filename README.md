@@ -56,6 +56,10 @@ kubectl apply -f cassandra/ingress-tcp.yaml
 
 ## Install ClickHouse
 ```
+kubectl apply -f clickhouse/pv-volume.yaml
+kubectl apply -f clickhouse/pv-claim.yaml
+kubectl apply -f clickhouse/pv-volume-replica.yaml
+kubectl apply -f clickhouse/pv-claim-replica.yaml
 helm install clickhouse liwenhe/clickhouse -f clickhouse/values.yaml
 kubectl apply -f clickhouse/ingress-tcp.yaml
 ```
