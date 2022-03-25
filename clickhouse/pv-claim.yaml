@@ -3,7 +3,7 @@ kind: PersistentVolumeClaim
 metadata:
   name: clickhouse-data-clickhouse-0
 spec:
-  storageClassName: clickhouse-sc
+  storageClassName: standard
   accessModes:
     - ReadWriteOnce
   resources:

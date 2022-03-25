@@ -5,7 +5,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: cassandra-sc
+  storageClassName: standard
   capacity:
     storage: 8Gi
   accessModes:

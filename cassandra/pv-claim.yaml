@@ -3,9 +3,10 @@ kind: PersistentVolumeClaim
 metadata:
   name: data-cassandra-0
 spec:
-  storageClassName: cassandra-sc
+  storageClassName: standard
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 8Gi
+  volumeName: cassandra-pv-volume

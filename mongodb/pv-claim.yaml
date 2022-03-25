@@ -3,9 +3,10 @@ kind: PersistentVolumeClaim
 metadata:
   name: mongodb-pv-claim
 spec:
-  storageClassName: mongodb-sc
+  storageClassName: standard
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
       storage: 8Gi
+  volumeName: mongodb-pv-volume
