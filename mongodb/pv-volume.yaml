@@ -5,7 +5,7 @@ metadata:
   labels:
     type: local
 spec:
-  storageClassName: standard
+  storageClassName: mongodb-sc
   capacity:
     storage: 8Gi
   accessModes:
