@@ -7,7 +7,7 @@ brew install helm
 
 ## Start Kubernetes Cluster
 ```
-minikube start --mount=true --mount-string="$HOME:/host"
+minikube start --cpus=4 --memory=5120 --mount=true --mount-string="$HOME:/host"
 ```
 
 ## Access Kubernetes Dashboard
