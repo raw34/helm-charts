@@ -15,7 +15,7 @@ global:
   ##   - myRegistryKeySecretName
   ##
   imagePullSecrets: []
-  storageClass: "cassandra-sc"
+  storageClass: ""
 
 ## @section Common parameters
 ##
