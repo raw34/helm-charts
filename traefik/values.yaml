@@ -357,13 +357,13 @@ ports:
     # The port protocol (TCP/UDP)
     protocol: TCP
 
-  clickhouse:
-    port: 9000
-    # hostPort: 9000
-    expose: true
-    exposedPort: 9000
-    # The port protocol (TCP/UDP)
-    protocol: TCP
+#  clickhouse:
+#    port: 9000
+#    # hostPort: 9000
+#    expose: true
+#    exposedPort: 9000
+#    # The port protocol (TCP/UDP)
+#    protocol: TCP
 
 #  redis:
 #    port: 6379
