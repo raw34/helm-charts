@@ -89,7 +89,7 @@ clickhouse:
       enabled: true
       accessModes: 
       - "ReadWriteOnce"
-      storageClassName: "standard"
+      storageClassName: "-"
       storage: "50Gi"
     ## Clickhouse logs volume
     logsPersistentVolume:
