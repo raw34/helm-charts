@@ -66,6 +66,10 @@ kubectl apply -f clickhouse/ingress-tcp.yaml
 
 ## Install Redis
 ```
+kubectl apply -f redis/pv-volume.yaml
+kubectl apply -f redis/pv-volume-replica.yaml
+kubectl apply -f redis/pv-claim.yaml
+kubectl apply -f redis/pv-claim-replica.yaml
 helm install redis bitnami/redis -f redis/values.yaml
 kubectl apply -f redis/ingress-tcp.yaml
 ```
