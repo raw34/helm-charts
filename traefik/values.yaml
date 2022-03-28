@@ -365,13 +365,13 @@ ports:
 #    # The port protocol (TCP/UDP)
 #    protocol: TCP
 
-#  redis:
-#    port: 6379
-#    # hostPort: 6379
-#    expose: true
-#    exposedPort: 6379
-#    # The port protocol (TCP/UDP)
-#    protocol: TCP
+  redis:
+    port: 6379
+    # hostPort: 6379
+    expose: true
+    exposedPort: 6379
+    # The port protocol (TCP/UDP)
+    protocol: TCP
 
 #  elasticsearch:
 #    port: 9200
