@@ -349,13 +349,13 @@ ports:
 #    # The port protocol (TCP/UDP)
 #    protocol: TCP
 
-  cassandra:
-    port: 9042
-    # hostPort: 9042
-    expose: true
-    exposedPort: 9042
-    # The port protocol (TCP/UDP)
-    protocol: TCP
+#  cassandra:
+#    port: 9042
+#    # hostPort: 9042
+#    expose: true
+#    exposedPort: 9042
+#    # The port protocol (TCP/UDP)
+#    protocol: TCP
 
 #  clickhouse:
 #    port: 9000
