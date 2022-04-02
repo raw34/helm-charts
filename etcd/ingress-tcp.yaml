@@ -1,0 +1,12 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRouteTCP
+metadata:
+  name: etcd
+spec:
+  entryPoints:
+    - etcd
+  routes:
+    - match: HostSNI(`*`)
+      services:
+        - name: etcd
+          port: 2379

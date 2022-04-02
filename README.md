@@ -80,6 +80,14 @@ helm install elasticsearch elastic/elasticsearch -f elasticsearch/values.yaml
 kubectl apply -f elasticsearch/ingress-tcp.yaml
 ```
 
+## Install Etcd
+```
+kubectl apply -f etcd/pv-volume.yaml
+kubectl apply -f etcd/pv-claim.yaml
+helm install etcd bitnami/etcd -f etcd/values.yaml
+kubectl apply -f etcd/ingress-tcp.yaml
+```
+
 ## Install Kafka
 ```
 helm install kafka bitnami/kafka -f kafka/values.yaml

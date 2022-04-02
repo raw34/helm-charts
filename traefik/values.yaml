@@ -381,6 +381,14 @@ ports:
 #    # The port protocol (TCP/UDP)
 #    protocol: TCP
 
+#  etcd:
+#    port: 2379
+#    # hostPort: 2379
+#    expose: true
+#    exposedPort: 2379
+#    # The port protocol (TCP/UDP)
+#    protocol: TCP
+
 #  kafka:
 #    port: 9092
 #    # hostPort: 9092
