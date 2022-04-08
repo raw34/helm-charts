@@ -373,19 +373,19 @@ ports:
     # The port protocol (TCP/UDP)
     protocol: TCP
 
-  elasticsearch:
-    port: 9200
-    # hostPort: 9200
-    expose: true
-    exposedPort: 9200
-    # The port protocol (TCP/UDP)
-    protocol: TCP
-
   etcd:
     port: 2379
     # hostPort: 2379
     expose: true
     exposedPort: 2379
+    # The port protocol (TCP/UDP)
+    protocol: TCP
+
+  elasticsearch:
+    port: 9200
+    # hostPort: 9200
+    expose: true
+    exposedPort: 9200
     # The port protocol (TCP/UDP)
     protocol: TCP
 
