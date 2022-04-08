@@ -76,6 +76,8 @@ kubectl apply -f redis/ingress-tcp.yaml
 
 ## Install Elasticsearch
 ```
+kubectl apply -f elasticsearch/pv-volume.yaml
+kubectl apply -f elasticsearch/pv-claim.yaml
 helm install elasticsearch elastic/elasticsearch -f elasticsearch/values.yaml
 kubectl apply -f elasticsearch/ingress-tcp.yaml
 ```
