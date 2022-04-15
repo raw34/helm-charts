@@ -101,7 +101,7 @@ auth:
     allowNoneAuthentication: true
     ## @param auth.rbac.rootPassword Root user password. The root user is always `root`
     ##
-    rootPassword: "123456"
+    rootPassword: ""
     ## @param auth.rbac.existingSecret Name of the existing secret containing credentials for the root user
     ##
     existingSecret: ""
