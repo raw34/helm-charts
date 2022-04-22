@@ -26,74 +26,56 @@ helm repo add liwenhe https://liwenhe1993.github.io/charts/
 
 ## Install Traefik
 ```
-helm install traefik traefik/traefik -f traefik/values.yaml
 kubectl apply -f traefik/ingress.yaml
+helm install traefik traefik/traefik -f traefik/values.yaml
 ```
 
 ## Install MySQL
 ```
-kubectl apply -f mysql/pv-volume.yaml
-kubectl apply -f mysql/pv-claim.yaml
+kubectl apply -f mysql/pv-volume.yaml,mysql/pv-claim.yaml,mysql/ingress-tcp.yaml
 helm install mysql bitnami/mysql -f mysql/values.yaml
-kubectl apply -f mysql/ingress-tcp.yaml
 ```
 
 ## Install MongoDB
 ```
-kubectl apply -f mongodb/pv-volume.yaml
-kubectl apply -f mongodb/pv-claim.yaml
+kubectl apply -f mongodb/pv-volume.yaml,mongodb/pv-claim.yaml,mongodb/ingress-tcp.yaml
 helm install mongodb bitnami/mongodb -f mongodb/values.yaml
-kubectl apply -f mongodb/ingress-tcp.yaml
 ```
 
 ## Install Cassandra
 ```
-kubectl apply -f cassandra/pv-volume.yaml
-kubectl apply -f cassandra/pv-claim.yaml
+kubectl apply -f cassandra/pv-volume.yaml,cassandra/pv-claim.yaml,cassandra/ingress-tcp.yaml
 helm install cassandra bitnami/cassandra -f cassandra/values.yaml
-kubectl apply -f cassandra/ingress-tcp.yaml
 ```
 
 ## Install ClickHouse
 ```
-kubectl apply -f clickhouse/pv-volume.yaml
-kubectl apply -f clickhouse/pv-volume-replica.yaml
-kubectl apply -f clickhouse/pv-claim.yaml
-kubectl apply -f clickhouse/pv-claim-replica.yaml
+kubectl apply -f clickhouse/pv-volume.yaml,clickhouse/pv-volume-replica.yaml,clickhouse/pv-claim.yaml,clickhouse/pv-claim-replica.yaml,clickhouse/ingress-tcp.yaml
 helm install clickhouse liwenhe/clickhouse -f clickhouse/values.yaml
-kubectl apply -f clickhouse/ingress-tcp.yaml
 ```
 
 ## Install Redis
 ```
-kubectl apply -f redis/pv-volume.yaml
-kubectl apply -f redis/pv-volume-replica.yaml
-kubectl apply -f redis/pv-claim.yaml
-kubectl apply -f redis/pv-claim-replica.yaml
+kubectl apply -f redis/pv-volume.yaml,redis/pv-volume-replica.yaml,redis/pv-claim.yaml,redis/pv-claim-replica.yaml,redis/ingress-tcp.yaml
 helm install redis bitnami/redis -f redis/values.yaml
-kubectl apply -f redis/ingress-tcp.yaml
 ```
 
 ## Install Etcd
 ```
-kubectl apply -f etcd/pv-volume.yaml
-kubectl apply -f etcd/pv-claim.yaml
+kubectl apply -f etcd/pv-volume.yaml,etcd/pv-claim.yaml,etcd/ingress-tcp.yaml
 helm install etcd bitnami/etcd -f etcd/values.yaml
-kubectl apply -f etcd/ingress-tcp.yaml
 ```
 
 ## Install Elasticsearch
 ```
-kubectl apply -f elasticsearch/pv-volume.yaml
-kubectl apply -f elasticsearch/pv-claim.yaml
+kubectl apply -f elasticsearch/pv-volume.yaml,elasticsearch/pv-claim.yaml,elasticsearch/ingress-tcp.yaml
 helm install elasticsearch elastic/elasticsearch -f elasticsearch/values.yaml
-kubectl apply -f elasticsearch/ingress-tcp.yaml
 ```
 
 ## Install Kafka
 ```
-helm install kafka bitnami/kafka -f kafka/values.yaml
 kubectl apply -f kafka/ingress-tcp.yaml
+helm install kafka bitnami/kafka -f kafka/values.yaml
 ```
 
 ## Install PHP
