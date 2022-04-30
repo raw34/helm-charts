@@ -1,0 +1,12 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRouteTCP
+metadata:
+  name: nsq
+spec:
+  entryPoints:
+    - nsq
+  routes:
+    - match: HostSNI(`*`)
+      services:
+        - name: nsq
+          port: 4150

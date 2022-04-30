@@ -22,6 +22,7 @@ helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add traefik https://helm.traefik.io/traefik
 helm repo add elastic https://helm.elastic.co
 helm repo add liwenhe https://liwenhe1993.github.io/charts/
+helm repo add beeinventor https://beeinventor.github.io/charts
 ```
 
 ## Install Traefik
@@ -70,6 +71,12 @@ helm install etcd bitnami/etcd -f etcd/values.yaml
 ```
 kubectl apply -f elasticsearch/pv-volume.yaml,elasticsearch/pv-claim.yaml,elasticsearch/ingress-tcp.yaml
 helm install elasticsearch elastic/elasticsearch -f elasticsearch/values.yaml
+```
+
+## Install Nsq
+```
+kubectl apply -f nsq/pv-volume.yaml,nsq/pv-claim.yaml,nsq/ingress-tcp.yaml
+helm install nsq beeinventor/nsq -f nsq/values.yaml
 ```
 
 ## Install Kafka
