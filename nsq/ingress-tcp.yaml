@@ -4,9 +4,12 @@ metadata:
   name: nsq
 spec:
   entryPoints:
-    - nsq
+    - nsqd
+    - nsqlookupd
   routes:
     - match: HostSNI(`*`)
       services:
-        - name: nsq
+        - name: nsq-nsqd
           port: 4150
+        - name: nsq-nsqlookupd
+          port: 4160
