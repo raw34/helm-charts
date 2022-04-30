@@ -46,7 +46,7 @@ nsqlookupd:
   affinity: {}
 
 nsqadmin:
-  enabled: false
+  enabled: true
 
   fullnameOverride:
 

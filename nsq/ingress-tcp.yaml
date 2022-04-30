@@ -6,10 +6,13 @@ spec:
   entryPoints:
     - nsqd
     - nsqlookupd
+    - nsqadmin
   routes:
     - match: HostSNI(`*`)
       services:
         - name: nsq-nsqd
           port: 4150
         - name: nsq-nsqlookupd
-          port: 4160
+          port: 4161
+        - name: nsq-nsqadmin
+          port: 4171

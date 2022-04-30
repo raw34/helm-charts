@@ -406,10 +406,18 @@ ports:
     protocol: TCP
 
   nsqlookupd:
-    port: 4160
-    # hostPort: 4160
+    port: 4161
+#    hostPort: 4161
     expose: true
-    exposedPort: 4160
+    exposedPort: 4161
+    # The port protocol (TCP/UDP)
+    protocol: TCP
+
+  nsqadmin:
+    port: 4171
+#    hostPort: 4171
+    expose: true
+    exposedPort: 4171
     # The port protocol (TCP/UDP)
     protocol: TCP
 
