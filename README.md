@@ -75,7 +75,7 @@ helm install elasticsearch elastic/elasticsearch -f elasticsearch/values.yaml
 
 ## Install Nsq
 ```
-kubectl apply -f nsq/pv-volume.yaml,nsq/pv-claim.yaml,nsq/ingress-tcp.yaml
+kubectl apply -f nsq/pv-volume.yaml,nsq/pv-claim.yaml,nsq/ingress.yaml,nsq/ingress-tcp.yaml
 helm install nsq beeinventor/nsq -f nsq/values.yaml
 ```
 
