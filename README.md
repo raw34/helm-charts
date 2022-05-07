@@ -21,8 +21,9 @@ helm repo add stable https://charts.helm.sh/stable
 helm repo add bitnami https://charts.bitnami.com/bitnami
 helm repo add traefik https://helm.traefik.io/traefik
 helm repo add elastic https://helm.elastic.co
-helm repo add liwenhe https://liwenhe1993.github.io/charts/
+helm repo add liwenhe https://liwenhe1993.github.io/charts
 helm repo add beeinventor https://beeinventor.github.io/charts
+helm repo add aliyun https://apphub.aliyuncs.com/stable
 ```
 
 ## Install Traefik
@@ -83,6 +84,12 @@ helm install nsq beeinventor/nsq -f nsq/values.yaml
 ```
 kubectl apply -f kafka/ingress-tcp.yaml
 helm install kafka bitnami/kafka -f kafka/values.yaml
+```
+
+## Install RabbitMQ
+```
+kubectl apply -f rabbitmq/pv-volume.yaml,rabbitmq/pv-claim.yaml,rabbitmq/ingress-tcp.yaml
+helm install rabbitmq aliyun/rabbitmq -f rabbitmq/values.yaml
 ```
 
 ## Install PHP

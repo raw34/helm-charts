@@ -389,14 +389,6 @@ ports:
     # The port protocol (TCP/UDP)
     protocol: TCP
 
-#  kafka:
-#    port: 9092
-#    # hostPort: 9092
-#    expose: true
-#    exposedPort: 9092
-#    # The port protocol (TCP/UDP)
-#    protocol: TCP
-
 #  nsqd:
 #    port: 4150
 #    # hostPort: 4150
@@ -420,6 +412,22 @@ ports:
 #    exposedPort: 4171
 #    # The port protocol (TCP/UDP)
 #    protocol: TCP
+
+#  kafka:
+#    port: 9092
+#    # hostPort: 9092
+#    expose: true
+#    exposedPort: 9092
+#    # The port protocol (TCP/UDP)
+#    protocol: TCP
+
+  rabbitmq:
+    port: 5672
+    # hostPort: 5672
+    expose: true
+    exposedPort: 5672
+    # The port protocol (TCP/UDP)
+    protocol: TCP
 
 # TLS Options are created as TLSOption CRDs
 # https://doc.traefik.io/traefik/https/tls/#tls-options

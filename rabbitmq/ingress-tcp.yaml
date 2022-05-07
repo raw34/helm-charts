@@ -1,0 +1,12 @@
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRouteTCP
+metadata:
+  name: rabbitmq
+spec:
+  entryPoints:
+    - rabbitmq
+  routes:
+    - match: HostSNI(`*`)
+      services:
+        - name: rabbitmq
+          port: 5672
