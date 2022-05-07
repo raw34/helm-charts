@@ -66,12 +66,12 @@ rabbitmq:
   ## RabbitMQ application username
   ## ref: https://github.com/bitnami/bitnami-docker-rabbitmq#environment-variables
   ##
-  username: user
+  username: root
 
   ## RabbitMQ application password
   ## ref: https://github.com/bitnami/bitnami-docker-rabbitmq#environment-variables
   ##
-  # password:
+  password: "123456"
   # existingPasswordSecret: name-of-existing-secret
 
   ## Erlang cookie to determine whether different nodes are allowed to communicate with each other
@@ -138,7 +138,7 @@ rabbitmq:
     # queue master locator
     queue_master_locator=min-masters
     # enable guest user
-    loopback_users.guest = false
+    loopback_users.guest = true
 
   ## Configuration file content: extra configuration
   ## Use this instead of `configuration` to add more configuration
