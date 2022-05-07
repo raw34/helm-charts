@@ -381,13 +381,13 @@ ports:
     # The port protocol (TCP/UDP)
     protocol: TCP
 
-  elasticsearch:
-    port: 9200
-    # hostPort: 9200
-    expose: true
-    exposedPort: 9200
-    # The port protocol (TCP/UDP)
-    protocol: TCP
+#  elasticsearch:
+#    port: 9200
+#    # hostPort: 9200
+#    expose: true
+#    exposedPort: 9200
+#    # The port protocol (TCP/UDP)
+#    protocol: TCP
 
 #  nsqd:
 #    port: 4150
