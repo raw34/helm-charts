@@ -89,7 +89,7 @@ helm install kafka bitnami/kafka -f kafka/values.yaml
 ## Install RabbitMQ
 ```
 kubectl apply -f rabbitmq/pv-volume.yaml,rabbitmq/pv-claim.yaml,rabbitmq/ingress-tcp.yaml
-helm install rabbitmq bitnami/rabbitmq -f rabbitmq/values.yaml
+helm install rabbitmq aliyun/rabbitmq -f rabbitmq/values.yaml
 ```
 
 ## Install PHP
