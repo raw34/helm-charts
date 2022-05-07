@@ -27,8 +27,8 @@ helm repo add beeinventor https://beeinventor.github.io/charts
 
 ## Install Traefik
 ```
-kubectl apply -f traefik/ingress.yaml
 helm install traefik traefik/traefik -f traefik/values.yaml
+kubectl apply -f traefik/ingress.yaml
 ```
 
 ## Install MySQL
