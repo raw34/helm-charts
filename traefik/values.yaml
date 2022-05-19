@@ -389,29 +389,29 @@ ports:
 #    # The port protocol (TCP/UDP)
 #    protocol: TCP
 
-#  nsqd:
-#    port: 4150
-#    # hostPort: 4150
-#    expose: true
-#    exposedPort: 4150
-#    # The port protocol (TCP/UDP)
-#    protocol: TCP
-#
-#  nsqlookupd:
-#    port: 4161
-##    hostPort: 4161
-#    expose: true
-#    exposedPort: 4161
-#    # The port protocol (TCP/UDP)
-#    protocol: TCP
-#
-#  nsqadmin:
-#    port: 4171
-##    hostPort: 4171
-#    expose: true
-#    exposedPort: 4171
-#    # The port protocol (TCP/UDP)
-#    protocol: TCP
+  nsqd:
+    port: 4150
+    # hostPort: 4150
+    expose: true
+    exposedPort: 4150
+    # The port protocol (TCP/UDP)
+    protocol: TCP
+
+  nsqlookupd:
+    port: 4161
+#    hostPort: 4161
+    expose: true
+    exposedPort: 4161
+    # The port protocol (TCP/UDP)
+    protocol: TCP
+
+  nsqadmin:
+    port: 4171
+#    hostPort: 4171
+    expose: true
+    exposedPort: 4171
+    # The port protocol (TCP/UDP)
+    protocol: TCP
 
 #  kafka:
 #    port: 9092
