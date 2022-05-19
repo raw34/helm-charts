@@ -429,6 +429,14 @@ ports:
     # The port protocol (TCP/UDP)
     protocol: TCP
 
+  rabbitmqmanager:
+    port: 15672
+    # hostPort: 15672
+    expose: true
+    exposedPort: 15672
+    # The port protocol (TCP/UDP)
+    protocol: TCP
+
 # TLS Options are created as TLSOption CRDs
 # https://doc.traefik.io/traefik/https/tls/#tls-options
 # Example:

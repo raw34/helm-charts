@@ -5,8 +5,11 @@ metadata:
 spec:
   entryPoints:
     - rabbitmq
+    - rabbitmqmanager
   routes:
     - match: HostSNI(`*`)
       services:
         - name: rabbitmq
           port: 5672
+        - name: rabbitmq
+          port: 15672
